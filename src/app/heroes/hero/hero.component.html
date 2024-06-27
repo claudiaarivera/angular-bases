@@ -1,0 +1,10 @@
+<h2>{{name}}</h2>
+<ul>
+  <li>Name: {{name}}</li>
+  <li>Age: {{age}}</li>
+  <li>Method: {{getHeroDescription()}}</li>
+  <li>Capitalize: {{capitalizeName}}</li>
+</ul>
+<button *ngIf="name !== 'Spiderman'" (click)="changeHero()">Change hero</button>
+<button *ngIf="age !== 34" (click)="changeAge()">Change age</button>
+<button (click)="reset()">Reset</button>

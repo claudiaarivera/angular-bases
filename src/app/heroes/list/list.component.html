@@ -1,0 +1,11 @@
+
+<ul>
+  @for(hero of heroNames; track hero) {
+    <li>{{hero}}</li>
+  }
+</ul>
+<p *ngIf="deletedHero else emptyHeroes">Héroe eliminado: <b>{{deletedHero}}</b></p>
+<ng-template #emptyHeroes>
+  <h4>No se ha eliminado ningun heroe</h4>
+</ng-template>
+<button *ngIf="heroNames.length > 0" (click)="removeLast()">Remove last one</button>
