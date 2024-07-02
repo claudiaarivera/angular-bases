@@ -1,0 +1,8 @@
+<h1>DBZ Characters</h1>
+<dbz-character-list
+  [heroList]="dbz.characters"
+  (onDeleteCharacter)="onDeleteCharacter($event)"
+></dbz-character-list>
+<dbz-add-character
+  (onNewCharacter)="onNewCharacter($event)"
+></dbz-add-character>

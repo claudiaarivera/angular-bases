@@ -1,0 +1,15 @@
+<form (ngSubmit)="addCharacter()">
+  <input
+    [(ngModel)]="character.name"
+    type="text"
+    name="name"
+    placeholder="Nombre"
+  /><br /><!--two way databinding [()]-->
+  <input
+    [(ngModel)]="character.power"
+    type="text"
+    name="power"
+    placeholder="Poder"
+  /><br />
+  <button>Agregar</button>
+</form>

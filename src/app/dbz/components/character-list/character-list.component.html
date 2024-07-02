@@ -1,0 +1,10 @@
+<h2>All characters</h2>
+<ul>
+  @for(character of heroList; track character.name; let idx = $index, even =
+  $even, last = $last) {
+  <li [ngClass]="{ 'text-blue': even, 'text-red': last }">
+    {{ idx + 1 }}. {{ character.name }} - <strong>{{ character.power }}</strong>
+    <span (click)="deleteCharacter(character.id)" role="button">⛔</span>
+  </li>
+  }
+</ul>
